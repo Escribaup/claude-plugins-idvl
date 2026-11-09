@@ -37,7 +37,17 @@ claude plugin install guia-vivo --marketplace Escribaup/claude-plugins-idvl
 > Não encontrou a opção **Add marketplace**? Faça uma vez a instalação pelo terminal (acima). Depois disso, o Guia vivo aparece no aplicativo também.
 
 ### No navegador (claude.ai/code) e no app do celular
-Essas sessões rodam na nuvem e não carregam plugins, então o Guia vivo não funciona lá. Se você digitar `/plugin`, vai aparecer "/plugin isn't available in this environment": instale pelo computador (terminal ou aplicativo, acima). Os projetos criados a partir do projeto modelo continuam funcionando na nuvem, só sem o painel.
+Essas sessões rodam na nuvem, num "ambiente" que é preparado do zero a cada sessão. Lá o comando `/plugin` não existe (aparece "/plugin isn't available in this environment"), mas dá para instalar o Guia vivo pelo **script de configuração do ambiente**, uma vez só:
+
+1. Numa sessão na nuvem, toque no nome do ambiente no topo da conversa (por exemplo, **Default**) e depois em **Edit**.
+2. Em **Setup script**, acrescente estas duas linhas no final:
+   ```
+   claude plugin marketplace add Escribaup/claude-plugins-idvl || true
+   claude plugin install guia-vivo@plugins-idvl || true
+   ```
+3. Salve. A partir da **próxima sessão** nesse ambiente, o Guia vivo já vem instalado.
+
+Se preferir, peça numa sessão na nuvem: *"Adicione o Guia vivo ao script de configuração deste ambiente"*. O Claude propõe a mudança e você aprova.
 
 ### Depois de instalar
 Abra um projeto e digite `/guia`. No aplicativo, o painel abre sozinho.
