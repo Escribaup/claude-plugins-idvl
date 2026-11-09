@@ -49,8 +49,8 @@ Abra um projeto e digite `/guia`. No aplicativo, o painel abre sozinho.
 Quando sair uma versão nova, rode no terminal, fora do Claude Code:
 
 ```
-claude plugin marketplace update claude-plugins-idvl
-claude plugin update guia-vivo@claude-plugins-idvl
+claude plugin marketplace update plugins-idvl
+claude plugin update guia-vivo@plugins-idvl
 ```
 
 Depois, **feche e abra o Claude Code de novo**. Para ver a versão instalada: `claude plugin list`.
@@ -72,6 +72,7 @@ Depois, feche e abra o Claude Code de novo.
 ## Para quem mantém este repositório
 
 - **Cada plugin fica em `plugins/<nome>/`** e é listado em `.claude-plugin/marketplace.json`.
+- **Nome interno do marketplace:** `plugins-idvl` (é o que aparece em `guia-vivo@plugins-idvl`). O Claude Code não aceita nomes que pareçam marketplaces oficiais, por isso ele é diferente do nome do repositório.
 - **Publicar uma versão nova:** faça as mudanças e **aumente o número de `version`** no `plugin.json` do plugin (por exemplo, de `0.5.0` para `0.6.0`). Sem isso, quem já instalou pode não receber a mudança. Avise a equipe para seguir "Atualizar".
 - **Proteja a branch `main`:** em **Settings › Branches**, exija revisão antes de juntar mudanças. O código destes plugins roda no computador de todos que os instalaram.
 - **Testes:** `claude plugin test plugins/guia-vivo` e `claude plugin validate .` antes de publicar.

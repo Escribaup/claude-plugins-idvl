@@ -1,5 +1,5 @@
 {
-  "name": "claude-plugins-idvl",
+  "name": "plugins-idvl",
   "description": "Plugins de boas práticas da IDVL para o Claude Code.",
   "owner": { "name": "Escribaup" },
   "plugins": [
