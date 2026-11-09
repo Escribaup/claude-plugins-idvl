@@ -21,5 +21,5 @@ Um mod para o Claude Code que funciona como um guia de boas práticas sempre à 
 - O botão **Nova tarefa** (ou `/clear`) recomeça o ciclo e pede o tamanho de novo.
 - A linha de status mostra a etapa e o tamanho (por exemplo, `Guia: 3/5 Implementar · Média · /guia`).
 - No aplicativo para computador, o painel abre sozinho quando a sessão começa. No terminal, use `/guia`.
-- No Claude Code na web (claude.ai/code) o Guia vivo não funciona, porque as sessões na web não carregam plugins.
+- No Claude Code na web (claude.ai/code) e no app do celular o Guia vivo não funciona, porque essas sessões rodam na nuvem e não carregam plugins.
 - O `/especificar` vem no projeto modelo. Em outros projetos, ao escolher **Grande**, o Claude segue o mesmo fluxo mesmo sem a skill.
