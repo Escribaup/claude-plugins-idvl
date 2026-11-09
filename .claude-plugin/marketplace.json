@@ -1,0 +1,12 @@
+{
+  "name": "claude-plugins-idvl",
+  "description": "Plugins de boas práticas da IDVL para o Claude Code.",
+  "owner": { "name": "Escribaup" },
+  "plugins": [
+    {
+      "name": "guia-vivo",
+      "source": "./plugins/guia-vivo",
+      "description": "Guia vivo de boas práticas do Claude Code: painel com o método dos 5 passos, tamanho da tarefa, progresso da especificação, checklist do projeto, dicas no momento certo e bloqueio de arquivos de senhas e certificados."
+    }
+  ]
+}
